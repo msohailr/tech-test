@@ -6,6 +6,10 @@ namespace AnyCompany
     {
         private static string ConnectionString = @"Data Source=(local);Database=Orders;User Id=admin;Password=password;";
 
+        /// <summary>
+        /// This method is incorrect in my opinion as it is saving an order without customer details
+        /// </summary>
+        /// <param name="order"></param>
         public void Save(Order order)
         {
             SqlConnection connection = new SqlConnection(ConnectionString);
